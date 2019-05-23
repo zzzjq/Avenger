@@ -1,6 +1,9 @@
 package avenger.web.controller;
 
-import org.springframework.stereotype.Controller;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 
@@ -8,7 +11,11 @@ import org.springframework.stereotype.Controller;
  * @date 2019年5月23日下午5:38:47
  *
  **/
-@Controller
+@RestController
 public class AvengerController {
 
+	@RequestMapping("/index")
+	public String index(HttpServletRequest request) {
+		return "index";
+	}
 }
