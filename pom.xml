@@ -26,7 +26,7 @@
 
 	<properties>
 		<global.encoding>UTF-8</global.encoding>
-		<java.version>1.8</java.version>
+		<global.jdk.version>1.8</global.jdk.version>
 		<plugin.compiler.version>3.5.1</plugin.compiler.version>
         <plugin.source.version>3.0.0</plugin.source.version>
         <plugin.deploy.version>2.8.2</plugin.deploy.version>
