@@ -20,7 +20,7 @@ public class PropUtils {
 
 	static {
 		prop = new Properties();
-		Properties envProp = loadPropertyFromFile("configs/config.properties");
+		Properties envProp = loadPropertyFromFile("config/config.properties");
 		prop.putAll(envProp);
 	}
 
