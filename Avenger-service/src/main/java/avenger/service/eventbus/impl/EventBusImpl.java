@@ -16,10 +16,10 @@ import avenger.service.eventbus.EventBus;
  **/
 public class EventBusImpl implements EventBus{
 	
-	private ConcurrentHashMap<String, Event<AsyncResult>> continer = new ConcurrentHashMap<String, Event<AsyncResult>>();
+	private ConcurrentHashMap<String, Event> continer = new ConcurrentHashMap<String, Event>();
 
 	@Override
-	public <T> EventBus resiger(Event<AsyncResult> event) {
+	public <T> EventBus resiger(Event<T> event) {
 		// TODO Auto-generated method stub
 		continer.put(event.eventName(), event);
 		return this;
@@ -27,10 +27,8 @@ public class EventBusImpl implements EventBus{
 
 	@Override
 	public void executeEvent() {
-		for(Entry<String, Event<AsyncResult>> entry : continer.entrySet()) {
-			System.out.println(entry.getKey());
-			AsyncResult result = entry.getValue().execute();
-			System.out.println(result.result());
+		for(Entry<String, Event> entry : continer.entrySet()) {
+			entry.getValue().execute();
 		}
 	}
 

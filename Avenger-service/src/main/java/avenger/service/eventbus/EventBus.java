@@ -8,7 +8,7 @@ package avenger.service.eventbus;
  **/
 public interface EventBus {
 
-	<T> EventBus resiger(Event<AsyncResult> event);
+	<T> EventBus resiger(Event<T> event);
 
 	void executeEvent();
 }
