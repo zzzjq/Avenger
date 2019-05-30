@@ -69,15 +69,19 @@
 			</dependency>
 			<dependency>
 				<groupId>zjq.work</groupId>
-				<artifactId>zjq-springboot-api</artifactId>
+				<artifactId>Avenger-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
-		<!-- <plugins> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
-			</plugin> </plugins> -->
+		<!-- <plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins> -->
 		<pluginManagement>
 			<plugins>
 				<plugin>
