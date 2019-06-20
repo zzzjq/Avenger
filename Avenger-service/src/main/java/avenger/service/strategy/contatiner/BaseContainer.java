@@ -18,7 +18,7 @@ import avenger.service.strategy.util.SpringBeanUtil;
  * @date 2019年6月20日下午2:24:42
  *
  **/
-public class BaseContainer<I, S extends IStrategy<I>> implements IContainer<I, S> {
+public abstract class BaseContainer<I, S extends IStrategy<I>> implements IContainer<I, S> {
 
 	private final Map<I, S> map = new ConcurrentHashMap<I, S>();
 
