@@ -72,6 +72,11 @@
 				<artifactId>Avenger-api</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>zjq.work</groupId>
+				<artifactId>Avenger-dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

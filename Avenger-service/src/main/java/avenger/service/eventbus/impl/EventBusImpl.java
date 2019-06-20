@@ -1,10 +1,8 @@
 package avenger.service.eventbus.impl;
 
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
-import avenger.service.eventbus.AsyncResult;
 import avenger.service.eventbus.Event;
 import avenger.service.eventbus.EventBus;
 
