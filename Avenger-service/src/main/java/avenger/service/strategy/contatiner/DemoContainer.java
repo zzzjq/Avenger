@@ -12,9 +12,12 @@ import avenger.service.strategy.enums.BaseStrategyEnum;
  *
  **/
 @Component
-public class DemoContainer extends BaseContainer<BaseStrategyEnum, DemoStartegy> {
+public class DemoContainer {
+	
+	static BaseContainer<BaseStrategyEnum, DemoStartegy> container = new BaseContainer<BaseStrategyEnum, DemoStartegy>();
 
 	public DemoStartegy getStrategy(BaseStrategyEnum type) {
-		return super.getStrategy(type);
+
+		return container.getStrategy(type);
 	}
 }
