@@ -2,7 +2,7 @@ package avenger.service.strategy.contatiner;
 
 import org.springframework.stereotype.Component;
 
-import avenger.service.strategy.DemoStartegy;
+import avenger.service.strategy.BaseStrategy;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
 /**
@@ -14,9 +14,9 @@ import avenger.service.strategy.enums.BaseStrategyEnum;
 @Component
 public class DemoContainer {
 	
-	static BaseContainer<BaseStrategyEnum, DemoStartegy> container = new BaseContainer<BaseStrategyEnum, DemoStartegy>();
+	BaseContainer<BaseStrategyEnum, BaseStrategy> container = new BaseContainer<BaseStrategyEnum, BaseStrategy>();
 
-	public DemoStartegy getStrategy(BaseStrategyEnum type) {
+	public BaseStrategy getStrategy(BaseStrategyEnum type) {
 
 		return container.getStrategy(type);
 	}
