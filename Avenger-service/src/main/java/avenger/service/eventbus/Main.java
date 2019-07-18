@@ -11,8 +11,8 @@ import avenger.service.eventbus.impl.EventBusImpl;
 public class Main {
 
 	public static void main(String[] args) {
-		EventBus e = new EventBusImpl();
-		Event ev = new DemoEvent();
+		EventBus<AsyncResult<String>> e = new EventBusImpl();
+		Event<AsyncResult<String>> ev = new DemoEvent();
 		e.resiger(ev);
 		e.executeEvent();
 	}
