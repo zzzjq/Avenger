@@ -12,7 +12,7 @@ import avenger.service.strategy.enums.BaseStrategyEnum;
  * @date 2019年6月20日下午4:20:37
  *
  **/
-@Component
+@Component("demoContainer")
 public class DemoContainer extends BaseContainer<BaseStrategyEnum, DemoStartegy> implements IDemo {
 
 	@Override
