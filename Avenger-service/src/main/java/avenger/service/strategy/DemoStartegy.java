@@ -12,7 +12,6 @@ public class DemoStartegy implements BaseStrategy {
 
 	@Override
 	public BaseStrategyEnum getStartegyType() {
-		// TODO Auto-generated method stub
 		return BaseStrategyEnum.DEMO;
 	}
 
