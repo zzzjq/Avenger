@@ -1,9 +1,5 @@
 package avenger.service.strategy.contatiner;
 
-import java.lang.reflect.GenericArrayType;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,13 +25,14 @@ public abstract class BaseContainer<I, S extends IStrategy<I>> implements IConta
 		return map.get(type);
 	}
 
+	@SuppressWarnings("unchecked")
 	private synchronized void initStrategy() {
 		if (map.size() > 0)
 			return;
 		if (this.getClass() != BaseContainer.class)
 			throw new RuntimeException("不允许使用");
 		final Class<S> strategyClass = (Class<S>) ClassExtractUtil.getClass(this.getClass().getGenericSuperclass(), 1);
-		final Class<I> typeClass = (Class<I>) ClassExtractUtil.getClass(this.getClass().getGenericSuperclass(), 0);
+		//final Class<I> typeClass = (Class<I>) ClassExtractUtil.getClass(this.getClass().getGenericSuperclass(), 0);
 		final Collection<S> strategys = SpringBeanUtil.getBeans(strategyClass).values();
 		for (S s : strategys) {
 			map.put(s.getStartegyType(), s);
