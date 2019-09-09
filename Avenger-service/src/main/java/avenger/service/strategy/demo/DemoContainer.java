@@ -1,8 +1,8 @@
-package avenger.service.strategy.contatiner;
+package avenger.service.strategy.demo;
 
 import org.springframework.stereotype.Component;
 
-import avenger.service.strategy.DemoStartegy;
+import avenger.service.strategy.contatiner.BaseContainer;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
 /**

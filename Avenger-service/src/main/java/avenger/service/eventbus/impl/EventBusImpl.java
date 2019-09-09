@@ -30,6 +30,12 @@ public class EventBusImpl implements EventBus<AsyncResult<String>>{
 		}
 	}
 
+	@Override
+	public void hande(Event<AsyncResult<String>> event) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 }

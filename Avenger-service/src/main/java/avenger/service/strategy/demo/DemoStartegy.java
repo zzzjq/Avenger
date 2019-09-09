@@ -1,5 +1,6 @@
-package avenger.service.strategy;
+package avenger.service.strategy.demo;
 
+import avenger.service.strategy.BaseStrategy;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
 /**

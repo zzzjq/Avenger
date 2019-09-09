@@ -1,6 +1,6 @@
-package avenger.service.strategy.contatiner;
+package avenger.service.strategy.demo;
 
-import avenger.service.strategy.DemoStartegy;
+import avenger.service.strategy.contatiner.IContainer;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
 /**

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import avenger.service.strategy.contatiner.IDemo;
+import avenger.service.strategy.demo.IDemo;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
 /**

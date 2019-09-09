@@ -34,5 +34,3 @@ spring:
 mybatis:
   mapper-locations: classpath:/mybatis/mapper/*.xml
   type-aliases-package: avenger.dao.entity
-
-  

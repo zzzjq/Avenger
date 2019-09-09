@@ -1,4 +1,7 @@
-package avenger.service.eventbus;
+package avenger.service.eventbus.main;
+
+import avenger.service.eventbus.AsyncResult;
+import avenger.service.eventbus.Event;
 
 /**
  * 

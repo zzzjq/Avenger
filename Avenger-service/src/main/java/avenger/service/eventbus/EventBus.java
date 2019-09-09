@@ -6,7 +6,7 @@ package avenger.service.eventbus;
  * @date 2019年5月27日下午3:47:01
  *
  **/
-public interface EventBus<T> {
+public interface EventBus<T> extends Handler<Event<T>>{
 
 	void resiger(Event<T> event);
 
