@@ -2,6 +2,7 @@ package avenger.service.strategy.demo;
 
 import org.springframework.stereotype.Component;
 
+import avenger.service.strategy.BaseStrategy;
 import avenger.service.strategy.contatiner.BaseContainer;
 import avenger.service.strategy.enums.BaseStrategyEnum;
 
@@ -13,10 +14,10 @@ import avenger.service.strategy.enums.BaseStrategyEnum;
  *
  **/
 @Component("demoContainer")
-public class DemoContainer extends BaseContainer<BaseStrategyEnum, DemoStartegy> implements IDemo {
+public class DemoContainer extends BaseContainer<BaseStrategyEnum, BaseStrategy> implements IDemo {
 
 	@Override
-	public DemoStartegy getStrategy(BaseStrategyEnum type) {
+	public BaseStrategy getStrategy(BaseStrategyEnum type) {
 		return super.getStrategy(type);
 	}
 

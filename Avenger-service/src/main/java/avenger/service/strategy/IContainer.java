@@ -1,6 +1,4 @@
-package avenger.service.strategy.contatiner;
-
-import avenger.service.strategy.IStrategy;
+package avenger.service.strategy;
 
 /**
  * 策略容器接口
@@ -12,5 +10,5 @@ import avenger.service.strategy.IStrategy;
 
 public interface IContainer<I, S extends IStrategy<I>> {
 
-	S getStrategy(I type);
+	S getStrategy(final I type);
 }

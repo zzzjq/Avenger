@@ -5,6 +5,8 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 
+import avenger.service.strategy.demo.DemoContainer;
+
 /**
  * java_type 体系抽取器
  * 
@@ -51,6 +53,11 @@ public final class ClassExtractUtil {
 		} else {
 			return (Class<?>) genericClass;
 		}
+	}
+	
+	public static void main(String[] args) {
+		DemoContainer c = new DemoContainer();
+		getClass(c.getClass().getGenericSuperclass(), 1);
 	}
 
 }
