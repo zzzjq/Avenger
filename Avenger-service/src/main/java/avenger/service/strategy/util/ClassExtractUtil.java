@@ -20,7 +20,7 @@ public final class ClassExtractUtil {
 	}
 
 	public static Class<?> getClass(final Type type, final int i) {
-		// 如果是范型实际类型，提取多级范型
+		// 如果是范型，提取多级范型
 		if (type instanceof ParameterizedType) {
 			return getGenericClass((ParameterizedType) type, i);
 		}
@@ -37,11 +37,11 @@ public final class ClassExtractUtil {
 	public static Class<?> getGenericClass(final ParameterizedType type, final int i) {
 		// 获取第i个范型变量
 		final Type genericClass = type.getActualTypeArguments()[i];
-		// 如果是范型实际类型，获取声明范型的类或者接口
+		// 如果是范型，获取声明范型的类或者接口
 		if (genericClass instanceof ParameterizedType) {
 			return (Class<?>) ((ParameterizedType) genericClass).getRawType();
 		}
-		// 如果是范型实际类型数组，获取范型实际类型数组的元素类型
+		// 如果是范型数组，获取范型数组的元素类型
 		else if (genericClass instanceof GenericArrayType) {
 			return (Class<?>) ((GenericArrayType) genericClass).getGenericComponentType();
 		}
